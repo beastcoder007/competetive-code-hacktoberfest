@@ -12,11 +12,11 @@
 # range from 0 to n-1. 
 
 # function to find one duplicate 
-def findduplicate(arr, n): 
+def find_duplicate(arr, n): 
 
 	# return -1 because in these cases 
 	# there can not be any repeated element 
-	if (n <= 1): 
+	if n <= 1: 
 		return -1
 
 	# initialize fast and slow 
@@ -34,7 +34,7 @@ def findduplicate(arr, n):
 
 	# loop to find entry point of the cycle 
 	fast = 0
-	while (slow != fast): 
+	while slow != fast: 
 		slow = arr[slow] 
 		fast = arr[fast] 
 	return slow 
@@ -44,6 +44,5 @@ if __name__ == "__main__":
 	
 	arr = [1, 2, 3, 4, 5, 6, 3 ] 
 	n = len(arr) 
-	print(findduplicate(arr, n)) 
-
+	print(find_duplicate(arr, n)) 
 
